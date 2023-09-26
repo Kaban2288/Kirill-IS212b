@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="text-gray-600 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#ffca28" d="M0.5,38.5C0.5,38.5,9,21,27,18c7,9,16,19,16,19s4.5-0.5,4.5,2.5c-3,0-5,0-5,0 c-27-14-37.104-9.178-37-1H0.5z"/><path fill="#212121" d="M48,40h-5.622l-0.108-0.056C20.933,28.88,12.303,30.587,9.058,32.588 C7.024,33.842,5.967,35.884,6,38.493L6.006,39h-6.305l0.349-0.719c0.086-0.177,8.821-17.767,26.868-20.774l0.294-0.049l0.183,0.235 c6.393,8.219,14.559,17.387,15.813,18.789c0.727-0.045,2.757-0.056,3.929,0.994C47.709,37.989,48,38.67,48,39.5V40z M42.622,39 h4.32c-0.078-0.308-0.234-0.564-0.472-0.777c-1.079-0.967-3.392-0.728-3.416-0.726L42.8,37.524l-0.172-0.189 c-0.089-0.1-8.934-9.94-15.839-18.792C11.516,21.241,3.159,34.721,1.333,38h3.673c0.1-2.739,1.313-4.898,3.527-6.264 C14.433,28.099,26.538,30.677,42.622,39z"/><path fill="#212121" d="M22,37h-4.664l-0.132-0.097C16.578,36.444,1.912,25.559,6.053,17.276 c1.845-3.691,5.35-3.464,7.448-3.323C13.869,13.978,14.207,14,14.5,14v1c-0.313,0-0.672-0.023-1.065-0.049 c-2.082-0.137-4.939-0.325-6.488,2.772C3.373,24.872,16.227,34.907,17.667,36h3.262c-0.079-0.247-0.225-0.441-0.44-0.59 c-0.57-0.392-1.537-0.385-2.143-0.151l-0.363,0.14l-0.225-0.317c-2.958-4.176-0.814-9.544-0.721-9.771l0.926,0.379 c-0.02,0.049-1.92,4.828,0.412,8.516c0.834-0.201,1.922-0.141,2.68,0.381C21.486,34.882,22,35.454,22,36.5V37z"/><path fill="#ffe082" d="M43.5,6.5c-2.208,1.583-4,3-4,5c-1.625-0.625-2.844-0.844-4.906-0.859 c-2.25-0.017-3.469,0.234-5.094,0.859c0-2-1.625-3.375-4-5c-3,18,9,23,9,23S46.5,24.5,43.5,6.5z"/><path fill="#212121" d="M34.5,30.042l-0.192-0.08c-0.124-0.052-12.331-5.363-9.301-23.544l0.129-0.773l0.646,0.442 c1.995,1.365,3.808,2.761,4.157,4.721c1.496-0.514,2.701-0.697,4.658-0.667c1.843,0.014,3.055,0.188,4.464,0.668 c0.338-1.844,2.02-3.189,4.147-4.715l0.652-0.468l0.132,0.792c3.03,18.181-9.177,23.492-9.301,23.544L34.5,30.042z M25.87,7.368 c-2.288,15.72,7.099,20.856,8.63,21.583c1.531-0.727,10.911-5.858,8.632-21.565C41.315,8.728,40,9.945,40,11.5v0.728l-0.68-0.261 c-1.586-0.61-2.736-0.812-4.73-0.826c-2.264-0.032-3.451,0.266-4.91,0.826L29,12.228V11.5C29,9.975,27.905,8.822,25.87,7.368z"/><path fill="#212121" d="M21,16c-4,2-7.688,1.521-6.958-1.375C14.75,11.75,19,14,21,16z"/><polygon fill="#212121" points="15,26 14,23 12.688,24.406"/><polygon fill="#212121" points="15.375,22.375 19,24 17.5,21.344"/><polygon fill="#212121" points="18,21 23,24 21.344,19.531"/><polygon fill="#212121" points="36.719,29.875 35,32 38,31"/><polygon fill="#212121" points="38,32 36,34 39,33"/><polygon fill="#212121" points="25.375,15.844 28,17 25.625,17.375"/><polygon fill="#212121" points="25.938,18.594 27.906,19.094 26.188,19.688"/><polygon fill="#212121" points="44,15.844 41,17 43.75,17.375"/><polygon fill="#212121" points="43.438,18.594 41,19 43.188,19.688"/><path fill="#212121" d="M28.375,12.5c0,0-2.156-0.75-2.688-5.75c0.938,0.719,4.203,3.453,4.172,5.141 C28.734,12.328,28.375,12.5,28.375,12.5z"/><path fill="#212121" d="M40.637,12.5c0,0,2.156-0.75,2.688-5.75c-0.938,0.719-4.203,3.453-4.172,5.141 C40.277,12.328,40.637,12.5,40.637,12.5z"/><path fill="#212121" d="M11.438,30.969c0,0,2.938-0.844,5.25-0.375c0.25,1.563,0.375,3.25,1.719,4.281 c1.063-0.219,2.875-0.5,3.219,1.594c-1.313-0.031-3.906,0.063-3.906,0.063S13,33.344,11.438,30.969z"/><path fill="#212121" d="M31.813,20.854l-0.439-0.238c0.911-1.675,1.373-3.186,1.373-4.491c0-0.998-0.278-1.604-0.826-1.803 c-0.864-0.313-2.172,0.427-2.729,1.096l-0.385-0.32c0.653-0.783,2.157-1.656,3.283-1.245c0.527,0.19,1.156,0.74,1.156,2.272 C33.247,17.514,32.765,19.105,31.813,20.854z"/><rect width="9" height=".5" x="30.5" y="17.25" fill="#212121"/><rect width="5" height=".5" x="25" y="21.25" fill="#212121"/><rect width="5" height=".5" x="25" y="23.25" fill="#212121"/><rect width="5" height=".5" x="39" y="21.25" fill="#212121"/><rect width="5" height=".5" x="39" y="23.25" fill="#212121"/><polygon fill="#212121" points="31.607,20.813 31.602,20.313 37.497,20.25 37.503,20.75"/><path fill="#212121" d="M37.14,20.772c-0.038-0.105-0.919-2.598,0.219-4.217c0.607-0.866,1.665-1.306,3.142-1.306v0.5 c-1.305,0-2.224,0.367-2.732,1.093c-0.989,1.409-0.166,3.736-0.157,3.76L37.14,20.772z"/><rect width=".5" height="6.403" x="33.75" y="19.298" fill="#212121" transform="rotate(-51.341 33.998 22.5)"/><g><rect width="6.403" height=".5" x="31.798" y="22.25" fill="#212121" transform="rotate(-38.659 35 22.5)"/></g><g><polygon fill="#212121" points="33,11 35,15 36,11"/></g></svg>
+            </svg>
+            <span class="ml-3 text-xl">Фокус</span>
+          </a>
+          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 hover:text-gray-900">Акции</a>
+            <a class="mr-5 hover:text-gray-900">Поиск</a>
+            <a class="mr-5 hover:text-gray-900">Управление бронированием</a>
+          </nav>
+          <button class="inline-flex items-center bg-amber-500 border-0 py-1 px-3 focus:outline-none hover:bg-amber-600 rounded text-base mt-4 md:mt-0">Вход
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto flex flex-wrap">
+          <div class="flex flex-wrap w-full">
+            <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Шаг 1</h2>
+                  <p class="leading-relaxed">Выбрать дату и время съемки;</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Шаг 2</h2>
+                  <p class="leading-relaxed">Выбрать количество участников;</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <circle cx="12" cy="5" r="3"></circle>
+                    <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Шаг 3</h2>
+                  <p class="leading-relaxed">Выбрать желаемую локацию для съемки, соответствующую условиям выше;</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Шаг 4</h2>
+                  <p class="leading-relaxed">Зарезервировать конкретные зоны на территории выбранной локации;</p>
+                </div>
+              </div>
+              <div class="flex relative pb-12">
+                <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                  <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                </div>
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Шаг 5</h2>
+                  <p class="leading-relaxed">Определить перечень дополнительных услуг;</p>
+                </div>
+              </div>
+              <div class="flex relative">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500 inline-flex items-center justify-center text-white relative z-10">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                    <path d="M22 4L12 14.01l-3-3"></path>
+                  </svg>
+                </div>
+                <div class="flex-grow pl-4">
+                  <h2 class="font-medium title-font text-sm text-gray-900 mb-1 tracking-wider">Финиш</h2>
+                  <p class="leading-relaxed">Оформить заказ.</p>
+                </div>
+              </div>
+              
+            </div>
+            <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" src="./images/promotions/promotion2.jpg" alt="step">
+          </div>
+        </div>
+        <div class="flex justify-center">
+        <button class="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">Бронь</button>
+        <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Шаг 1</button>
+      </div>
+      <div class="container px-5 py-24 mx-auto">
+        <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+
+          <p class="leading-relaxed text-lg">Девиз компании «Фокус»: Сделай жизнь ярче!</p>
+          <p>У нас Вы сможете подобрать подходящий зал для Вашей фотосессии, приобрести подарочные сертификаты и даже сделать съёмку с нашим фотографом! 
+              В наших студиях современное осветительное оборудование с множеством светоформирующих насадок, оригинальные декорации, разнообразный реквизит и большой опыт наших сотрудников.
+              </p>
+          <span class="inline-block h-1 w-10 rounded bg-amber-500 mt-8 mb-6"></span>
+        </div>
+      </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <h1 class="text-3xl font-medium title-font text-gray-900 mb-12 text-center">Отзывы</h1>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/2 w-full">
+              <div class="h-full bg-gray-100 p-8 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <a class="inline-flex items-center">
+                    <img alt="testimonial" src="./images/people/1.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-gray-900">Алина</span>
+                    </span>
+                  </a>
+                <p class="leading-relaxed mb-6">Спасибо большое! Локация "Черная жемчужина" просто супер! Все в бурных эмоциях, фото получились просто огонь!</p>
+
+              </div>
+            </div>
+            <div class="p-4 md:w-1/2 w-full">
+              <div class="h-full bg-gray-100 p-8 rounded">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                  <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                </svg>
+                <a class="inline-flex items-center">
+                    <img alt="testimonial" src="./images/people/2.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-gray-900">Марина</span>
+                    </span>
+                  </a>
+                <p class="leading-relaxed mb-6">Долго думала как отпразновать годовщину свадьбы. Увидела фото ваших локаций и влюбилась!
+                    Отлично провели время с мужем, сделали кучу фото для инстаграмма и даже распечатали несколько на память)</p>
+
+              </div>
+            </div>
+
+            <div class="p-4 md:w-1/2 w-full">
+                <div class="h-full bg-gray-100 p-8 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                  </svg>
+                  <a class="inline-flex items-center">
+                    <img alt="testimonial" src="./images/people/3.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-gray-900">Алена и Ко</span>
+                    </span>
+                  </a>
+                  <p class="leading-relaxed mb-6">Всё очень понравилось. 
+                    Воспользовались с девочками услугами вашего фотографа Ильи, теперь фотаемся только у него!</p>
+
+                </div>
+              </div>
+
+              <div class="p-4 md:w-1/2 w-full">
+                <div class="h-full bg-gray-100 p-8 rounded">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="block w-5 h-5 text-gray-400 mb-4" viewBox="0 0 975.036 975.036">
+                    <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+                  </svg>
+                  <a class="inline-flex items-center">
+                    <img alt="testimonial" src="./images/people/4.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                    <span class="flex-grow flex flex-col pl-4">
+                      <span class="title-font font-medium text-gray-900">Наталия</span>
+                    </span>
+                  </a>
+                  <p class="leading-relaxed mb-6">Уже не первый раз устраиваю себе праздник, организуя фотосессию в ваших локациях. Не дорого, а эмоций на весь день</p>
+
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Поиск</h1>
+            
+          </div>
+          <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+            <div class="relative flex-grow w-full">
+              <label for="full-name" class="leading-7 text-sm text-gray-600">Выбор региона</label>
+              <input type="text" id="full-name" name="full-name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative flex-grow w-full">
+              <label for="email" class="leading-7 text-sm text-gray-600">Дата и время сьемки</label>
+              <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative flex-grow w-full">
+                <label for="email" class="leading-7 text-sm text-gray-600">Количество участников</label>
+                <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+          </div>
+          <div class="flex justify-center my-10">
+            <button class="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">Поиск</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20">
+            <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Наши акции</h1>
+              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+            </div>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/promotions/promotion1.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Акция</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Скидка до 60%. За заказ зоны в локации «Черная жемчужина»</h2>
+                <p class="leading-relaxed text-sm">Устали от городского шума, хотите провести фотосессию за городом в живописной локации? Заказывайте место в локации «Черная жемчужина».</p>
+                <div class="flex justify-center my-7">
+                    <button class="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">Подробнее</button>
+                  </div>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/promotions/promotion2.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Акция</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Скидка до 51% при заказе услуг фотографа и реквизита</h2>
+                <p class="leading-relaxed text-sm">Локация «Поляна сказок» расположена в живописной загородной местности на берегу чистого озера.</p>
+                <div class="flex justify-center my-10">
+                    <button class="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">Подробнее</button>
+                  </div>
+                
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="bg-gray-100 p-6 rounded-lg">
+                <img class="h-40 rounded w-full object-cover object-center mb-6" src="./images/promotions/promotion3.jpg" alt="content">
+                <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">Акция</h3>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Скидка до 25%. Закажи праздник "Под ключ"</h2>
+                <p class="leading-relaxed text-sm">При выборе локации для 5 человек и больше, а также при заказе всех дополнительных услуг можно очень неплохо сэкономить!
+                    </p>
+                <div class="flex justify-center my-10">
+                    <button class="inline-flex text-white bg-amber-500 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">Подробнее</button>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="container px-5 pb-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+              <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Подпишись на наши акции</h1>
+            </div>
+            <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+              <div class="relative flex-grow w-full">
+                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                <input type="email" id="email" name="email" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+              <button class="text-white bg-amber-500 border-0 py-2 px-8 focus:outline-none hover:bg-amber-600 rounded text-lg">Подписаться</button>
+            </div>
+          </div>
+      </section>
+
+      <footer class="text-gray-600 body-font">
+        <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+          <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#ffca28" d="M0.5,38.5C0.5,38.5,9,21,27,18c7,9,16,19,16,19s4.5-0.5,4.5,2.5c-3,0-5,0-5,0 c-27-14-37.104-9.178-37-1H0.5z"/><path fill="#212121" d="M48,40h-5.622l-0.108-0.056C20.933,28.88,12.303,30.587,9.058,32.588 C7.024,33.842,5.967,35.884,6,38.493L6.006,39h-6.305l0.349-0.719c0.086-0.177,8.821-17.767,26.868-20.774l0.294-0.049l0.183,0.235 c6.393,8.219,14.559,17.387,15.813,18.789c0.727-0.045,2.757-0.056,3.929,0.994C47.709,37.989,48,38.67,48,39.5V40z M42.622,39 h4.32c-0.078-0.308-0.234-0.564-0.472-0.777c-1.079-0.967-3.392-0.728-3.416-0.726L42.8,37.524l-0.172-0.189 c-0.089-0.1-8.934-9.94-15.839-18.792C11.516,21.241,3.159,34.721,1.333,38h3.673c0.1-2.739,1.313-4.898,3.527-6.264 C14.433,28.099,26.538,30.677,42.622,39z"/><path fill="#212121" d="M22,37h-4.664l-0.132-0.097C16.578,36.444,1.912,25.559,6.053,17.276 c1.845-3.691,5.35-3.464,7.448-3.323C13.869,13.978,14.207,14,14.5,14v1c-0.313,0-0.672-0.023-1.065-0.049 c-2.082-0.137-4.939-0.325-6.488,2.772C3.373,24.872,16.227,34.907,17.667,36h3.262c-0.079-0.247-0.225-0.441-0.44-0.59 c-0.57-0.392-1.537-0.385-2.143-0.151l-0.363,0.14l-0.225-0.317c-2.958-4.176-0.814-9.544-0.721-9.771l0.926,0.379 c-0.02,0.049-1.92,4.828,0.412,8.516c0.834-0.201,1.922-0.141,2.68,0.381C21.486,34.882,22,35.454,22,36.5V37z"/><path fill="#ffe082" d="M43.5,6.5c-2.208,1.583-4,3-4,5c-1.625-0.625-2.844-0.844-4.906-0.859 c-2.25-0.017-3.469,0.234-5.094,0.859c0-2-1.625-3.375-4-5c-3,18,9,23,9,23S46.5,24.5,43.5,6.5z"/><path fill="#212121" d="M34.5,30.042l-0.192-0.08c-0.124-0.052-12.331-5.363-9.301-23.544l0.129-0.773l0.646,0.442 c1.995,1.365,3.808,2.761,4.157,4.721c1.496-0.514,2.701-0.697,4.658-0.667c1.843,0.014,3.055,0.188,4.464,0.668 c0.338-1.844,2.02-3.189,4.147-4.715l0.652-0.468l0.132,0.792c3.03,18.181-9.177,23.492-9.301,23.544L34.5,30.042z M25.87,7.368 c-2.288,15.72,7.099,20.856,8.63,21.583c1.531-0.727,10.911-5.858,8.632-21.565C41.315,8.728,40,9.945,40,11.5v0.728l-0.68-0.261 c-1.586-0.61-2.736-0.812-4.73-0.826c-2.264-0.032-3.451,0.266-4.91,0.826L29,12.228V11.5C29,9.975,27.905,8.822,25.87,7.368z"/><path fill="#212121" d="M21,16c-4,2-7.688,1.521-6.958-1.375C14.75,11.75,19,14,21,16z"/><polygon fill="#212121" points="15,26 14,23 12.688,24.406"/><polygon fill="#212121" points="15.375,22.375 19,24 17.5,21.344"/><polygon fill="#212121" points="18,21 23,24 21.344,19.531"/><polygon fill="#212121" points="36.719,29.875 35,32 38,31"/><polygon fill="#212121" points="38,32 36,34 39,33"/><polygon fill="#212121" points="25.375,15.844 28,17 25.625,17.375"/><polygon fill="#212121" points="25.938,18.594 27.906,19.094 26.188,19.688"/><polygon fill="#212121" points="44,15.844 41,17 43.75,17.375"/><polygon fill="#212121" points="43.438,18.594 41,19 43.188,19.688"/><path fill="#212121" d="M28.375,12.5c0,0-2.156-0.75-2.688-5.75c0.938,0.719,4.203,3.453,4.172,5.141 C28.734,12.328,28.375,12.5,28.375,12.5z"/><path fill="#212121" d="M40.637,12.5c0,0,2.156-0.75,2.688-5.75c-0.938,0.719-4.203,3.453-4.172,5.141 C40.277,12.328,40.637,12.5,40.637,12.5z"/><path fill="#212121" d="M11.438,30.969c0,0,2.938-0.844,5.25-0.375c0.25,1.563,0.375,3.25,1.719,4.281 c1.063-0.219,2.875-0.5,3.219,1.594c-1.313-0.031-3.906,0.063-3.906,0.063S13,33.344,11.438,30.969z"/><path fill="#212121" d="M31.813,20.854l-0.439-0.238c0.911-1.675,1.373-3.186,1.373-4.491c0-0.998-0.278-1.604-0.826-1.803 c-0.864-0.313-2.172,0.427-2.729,1.096l-0.385-0.32c0.653-0.783,2.157-1.656,3.283-1.245c0.527,0.19,1.156,0.74,1.156,2.272 C33.247,17.514,32.765,19.105,31.813,20.854z"/><rect width="9" height=".5" x="30.5" y="17.25" fill="#212121"/><rect width="5" height=".5" x="25" y="21.25" fill="#212121"/><rect width="5" height=".5" x="25" y="23.25" fill="#212121"/><rect width="5" height=".5" x="39" y="21.25" fill="#212121"/><rect width="5" height=".5" x="39" y="23.25" fill="#212121"/><polygon fill="#212121" points="31.607,20.813 31.602,20.313 37.497,20.25 37.503,20.75"/><path fill="#212121" d="M37.14,20.772c-0.038-0.105-0.919-2.598,0.219-4.217c0.607-0.866,1.665-1.306,3.142-1.306v0.5 c-1.305,0-2.224,0.367-2.732,1.093c-0.989,1.409-0.166,3.736-0.157,3.76L37.14,20.772z"/><rect width=".5" height="6.403" x="33.75" y="19.298" fill="#212121" transform="rotate(-51.341 33.998 22.5)"/><g><rect width="6.403" height=".5" x="31.798" y="22.25" fill="#212121" transform="rotate(-38.659 35 22.5)"/></g><g><polygon fill="#212121" points="33,11 35,15 36,11"/></g></svg>
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            <span class="ml-3 text-xl">ФОКУС</span>
+          </a>
+          <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">Телефон “8 (800) 333-30-30”
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+            <a class="text-gray-500">
+                Home
+            </a>
+            <a class="ml-3 text-gray-500">
+                Login
+            </a>
+            <a class="ml-3 text-gray-500">
+                Sign up
+            </a>
+            <a class="ml-3 text-gray-500">
+                Contact 
+            </a>
+            <a class="ml-3 text-gray-500">
+                News
+            </a>
+            <a class="ml-3 text-gray-500">
+                Return 
+            </a>
+            <a class="ml-3 text-gray-500">
+                Feedback
+            </a>
+
+          </span>
+        </div>
+      </footer>
+
+</body>
+</html>
